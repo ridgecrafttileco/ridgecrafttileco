@@ -1,4 +1,1036 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="jKaxxvhL-jU13mnz7AdlVi9jnVOqjn01gvY-TZCinXU" />
+<title>Ridgecraft Tile Co. — Tile Cleaning, Regrouting & Repair in Orem, Utah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black:      #0a0a0a;
+    --dark:       #1c1c1c;
+    --mid:        #4a4a4a;
+    --muted:      #888;
+    --light:      #d4d4d4;
+    --border:     #e8e8e8;
+    --bg:         #fafafa;
+    --white:      #ffffff;
+    --gold:       #b8965a;
+    --gold-light: #d4ae78;
+    --gold-pale:  #f5edd8;
+    --serif: 'Cormorant Garamond', serif;
+    --sans:  'Jost', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--white); color: var(--black); overflow-x: hidden; font-weight: 300; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-top {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.1rem 3rem;
+    gap: 3rem;
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--black);
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .nav-logo span {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gold);
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  .nav-links a {
+    color: var(--mid);
+    text-decoration: none;
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--black); }
+  .nav-cta {
+    background: var(--gold) !important;
+    color: var(--black) !important;
+    padding: 0.55rem 1.2rem !important;
+    letter-spacing: 0.08em !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; opacity: 1 !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 65px;
+    background: var(--white);
+    padding: 3rem;
+  }
+  .hero-box {
+    position: relative;
+    overflow: hidden;
+    background: var(--black);
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 5rem;
+  }
+  .hero-grid-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(184,150,90,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(184,150,90,0.07) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridDrift 20s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes gridDrift { from { background-position: 0 0; } to { background-position: 60px 60px; } }
+  .hero-glow {
+    position: absolute; top: 10%; left: -5%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(184,150,90,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-left {
+    position: relative; z-index: 2;
+    max-width: 680px;
+  }
+  .hero-right { display: none; }
+
+  .hero-tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .hero-tag::before { content: ''; display: block; width: 28px; height: 1px; background: var(--gold); }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(3.5rem, 5vw, 5.8rem);
+    font-weight: 400;
+    line-height: 1.0;
+    color: var(--white);
+    margin-bottom: 2rem;
+  }
+  .hero h1 em { font-style: italic; }
+
+  .hero-desc {
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.8;
+    max-width: 400px;
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--white);
+    color: var(--black);
+    padding: 0.85rem 2.2rem;
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-primary:hover { background: var(--light); }
+
+  .btn-outline {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.7);
+    padding: 0.85rem 2.2rem;
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--white); color: var(--white); }
+
+  .hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .hero-stat-item {
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-top: 0.5rem;
+  }
+  .hero-stat-item:first-child { border-top: 2px solid var(--gold); padding-top: 1.5rem; }
+  .hero-stat-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .stat-number {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .stat-desc { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* ── SECTIONS ── */
+  section { padding: 7rem 3rem; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+
+  .section-header { margin-bottom: 4rem; }
+  .section-tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+  .section-tag::before { content: ''; display: block; width: 28px; height: 1px; background: var(--gold); }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 3.5vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--black);
+  }
+  h2 em { font-style: italic; }
+
+  .section-sub {
+    margin-top: 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.8;
+    max-width: 500px;
+    font-weight: 300;
+  }
+
+  /* ── SERVICES ── */
+  #services { background: var(--white); border-top: 1px solid var(--border); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+  }
+  .service-card {
+    padding: 2.5rem 2rem;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    transition: background 0.2s;
+    overflow: hidden;
+  }
+  .service-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease; }
+  .service-card:hover { background: var(--bg); }
+  .service-card:hover::after { transform: scaleX(1); }
+
+  .service-num {
+    font-family: var(--serif);
+    font-size: 0.85rem;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .service-card h3 {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+  }
+  .service-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.75; font-weight: 300; }
+  .service-price {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ── WHY ── */
+  #why { background: var(--black); }
+  #why h2 { color: var(--white); }
+  #why .section-tag { color: var(--gold); }
+  #why .section-tag::before { background: var(--gold); }
+  #why .section-sub { color: #666; }
+
+  .why-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .why-list { display: flex; flex-direction: column; }
+  .why-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid #1e1e1e;
+    align-items: start;
+  }
+  .why-item:first-child { border-top: 1px solid #1e1e1e; }
+  .why-num {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--gold);
+    font-style: italic;
+    padding-top: 0.2rem;
+  }
+  .why-item h4 {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+  .why-item p { font-size: 0.85rem; color: #666; line-height: 1.75; font-weight: 300; }
+
+  .why-comparison {
+    background: #111;
+    border: 1px solid #1e1e1e;
+    padding: 2.5rem;
+  }
+  .comp-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #1e1e1e;
+  }
+  .comp-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid #161616;
+  }
+  .comp-row:last-of-type { border-bottom: none; }
+  .comp-service { font-size: 0.85rem; color: #666; font-weight: 300; }
+  .comp-prices { display: flex; gap: 1rem; align-items: center; }
+  .price-me {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--gold);
+    background: rgba(184,150,90,0.1);
+    border: 1px solid rgba(184,150,90,0.25);
+    padding: 0.25rem 0.8rem;
+    letter-spacing: 0.04em;
+  }
+  .price-them {
+    font-size: 0.82rem;
+    color: #444;
+    text-decoration: line-through;
+    letter-spacing: 0.04em;
+  }
+  .comp-note {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1e1e1e;
+    font-size: 0.8rem;
+    color: #444;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ── PRICING ── */
+  #pricing { background: var(--bg); border-top: 1px solid var(--border); }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+  }
+  .price-card {
+    padding: 2.5rem 2rem;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+    position: relative;
+    transition: background 0.2s;
+  }
+  .price-card:hover { background: var(--bg); }
+  .price-card.featured { background: var(--black); }
+  .price-card.featured:hover { background: #111; }
+
+  .price-tag-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .price-card.featured .price-tag-label { color: var(--gold); }
+
+  .price-card h3 {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .price-card.featured h3 { color: var(--white); }
+
+  .price-amount {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .price-card.featured .price-amount { color: var(--gold-light); }
+
+  .price-note {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+  .price-card.featured .price-note { color: #555; }
+
+  .price-divider { height: 1px; background: var(--border); margin-bottom: 1.5rem; }
+  .price-card.featured .price-divider { background: #1e1e1e; }
+
+  .price-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+  .price-list li { font-size: 0.82rem; color: var(--muted); font-weight: 300; line-height: 1.5; padding-left: 1rem; position: relative; }
+  .price-list li::before { content: '—'; position: absolute; left: 0; color: var(--light); }
+  .price-card.featured .price-list li { color: #555; }
+  .price-card.featured .price-list li::before { color: #333; }
+
+  /* ── PROCESS ── */
+  #process { background: var(--white); border-top: 1px solid var(--border); }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+  }
+  .process-step {
+    padding: 2.5rem 2rem;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .step-index {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--gold-pale);
+    display: block;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+  }
+  .process-step h4 {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 0.7rem;
+  }
+  .process-step p { font-size: 0.85rem; color: var(--muted); line-height: 1.75; font-weight: 300; }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials { background: var(--bg); border-top: 1px solid var(--border); }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .testimonial-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .t-quote {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    color: var(--gold);
+    line-height: 0.5;
+  }
+  .t-text {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--dark);
+    line-height: 1.7;
+    font-style: italic;
+    flex: 1;
+  }
+  .t-stars { display: flex; gap: 2px; }
+  .t-star { width: 12px; height: 12px; background: var(--gold); clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+  .t-author {
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+  }
+  .t-name { font-size: 0.82rem; font-weight: 500; color: var(--black); letter-spacing: 0.05em; }
+  .t-loc { font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--white); border-top: 1px solid var(--border); }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 0;
+    border: 1px solid var(--border);
+  }
+  .contact-left {
+    padding: 3.5rem;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    background: var(--bg);
+  }
+  .contact-right { padding: 3.5rem; }
+
+  .contact-detail { display: flex; flex-direction: column; gap: 0.3rem; }
+  .detail-label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .detail-value {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--black);
+  }
+  .detail-value a { color: var(--black); text-decoration: none; }
+  .detail-value a:hover { text-decoration: underline; }
+
+  .area-note {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    background: var(--white);
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  .form-group label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    border: 1px solid var(--border);
+    border-radius: 0;
+    padding: 0.8rem 1rem;
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--black);
+    background: var(--white);
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--black); }
+  .form-group textarea { resize: vertical; min-height: 110px; }
+
+  .form-submit {
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 0.9rem 2.5rem;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+  }
+  .form-submit:hover { background: var(--gold-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black);
+    padding: 2.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-logo {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--white);
+  }
+  .footer-logo span { font-style: italic; font-weight: 400; color: var(--gold); }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { font-size: 0.75rem; color: #444; text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-copy { font-size: 0.75rem; color: #333; letter-spacing: 0.06em; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 800px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 5rem 2rem; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .contact-layout { grid-template-columns: 1fr; }
+    .contact-left { border-right: none; border-bottom: 1px solid var(--border); }
+  }
+  @media (max-width: 650px) {
+    nav .nav-top { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 5rem 1.5rem; }
+    .services-grid, .pricing-grid, .process-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+
+  .reveal {
+    animation: revealUp 0.7s ease both;
+  }
+  @keyframes revealUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-top">
+    <a href="#home" class="nav-logo">Ridgecraft <span>Tile Co.</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Me</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-box">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-left">
+      <div class="hero-tag">Orem, Utah &nbsp;·&nbsp; Indoor Tile Specialist</div>
+      <h1>Your Tile,<br><em>Restored.</em></h1>
+      <p class="hero-desc">Professional tile cleaning, regrouting, caulking, and repair — for a fraction of what big companies charge. Honest work. Real results.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Get a Free Quote</a>
+        <a href="#services" class="btn-outline">View Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">What I Do</div>
+      <h2>Every Indoor Tile Service<br><em>You Need</em></h2>
+      <p class="section-sub">From routine deep cleans to full regrouts and cracked tile replacement — all done right, all done locally in Orem, Utah.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-num">01</span>
+        <h3>Deep Tile<br>Cleaning</h3>
+        <p>Professional-grade chemicals with proper dwell time and drill-brush technique that reaches every valley of textured tile. Results you can't get from a rental machine.</p>
+        <span class="service-price">Starting at $125</span>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">02</span>
+        <h3>Grout<br>Regrouting</h3>
+        <p>Old grout cracked, stained, or missing? I remove and replace it clean using oscillating tool precision — no chip damage to your tile.</p>
+        <span class="service-price">From $225 · Showers from $275</span>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">03</span>
+        <h3>Caulking &amp;<br>Recaulking</h3>
+        <p>Tub edges, shower corners, fixture bases — old moldy caulk removed and replaced with fresh mold-resistant caulk. The job most homeowners ignore.</p>
+        <span class="service-price">$75–$150 per area</span>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">04</span>
+        <h3>Tile<br>Replacement</h3>
+        <p>Cracked or chipped tile replaced to match. I bring all the tools — wet saw, oscillating tool, thinset. Seamless blend with existing tile.</p>
+        <span class="service-price">1 tile from $175 · Section from $650</span>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">05</span>
+        <h3>Grout &amp; Tile<br>Sealing</h3>
+        <p>Unsealed grout is why tile gets dirty so fast. Sealing after every clean or regrout keeps surfaces looking good far longer. 30-minute add-on.</p>
+        <span class="service-price">$50–$100 add-on</span>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">06</span>
+        <h3>Natural Stone<br>Care</h3>
+        <p>Marble, travertine, limestone, slate — these require pH neutral products and specialized technique. I know the difference. Your stone won't be damaged.</p>
+        <span class="service-price">Custom quote</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">The Honest Pitch</div>
+      <h2>Why Choose Me<br><em>Over the Big Guys</em></h2>
+      <p class="section-sub">I'm not a franchise. I'm local, I'm accountable, and I'll be at your door when I say I will.</p>
+    </div>
+    <div class="why-layout">
+      <div class="why-list">
+        <div class="why-item reveal">
+          <span class="why-num">01</span>
+          <div>
+            <h4>Half the Price, Same Quality</h4>
+            <p>Established companies in Utah County charge $300+ for a standard bathroom. I charge $150–$225 and use the exact same professional methods and chemicals.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <span class="why-num">02</span>
+          <div>
+            <h4>I Actually Show Up</h4>
+            <p>Showing up on time puts me ahead of 80% of contractors. You'll get a confirmed time window and I will be there without exception.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <span class="why-num">03</span>
+          <div>
+            <h4>Utah Tile Problems, Solved</h4>
+            <p>Utah's hard water and dry climate destroy grout faster than anywhere. I know what works here — not generic advice from a manual.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <span class="why-num">04</span>
+          <div>
+            <h4>Honest About Everything</h4>
+            <p>If something goes wrong, I tell you and I fix it. No hiding mistakes. No upselling things you don't need. That's rare at any price point.</p>
+          </div>
+        </div>
+      </div>
+      <div class="why-comparison reveal">
+        <div class="comp-title">Price Comparison — Orem, Utah</div>
+        <div class="comp-row">
+          <span class="comp-service">Standard Bathroom Clean</span>
+          <div class="comp-prices"><span class="price-me">Me: $150</span><span class="price-them">$300+</span></div>
+        </div>
+        <div class="comp-row">
+          <span class="comp-service">Shower Regrout</span>
+          <div class="comp-prices"><span class="price-me">Me: $275</span><span class="price-them">$450+</span></div>
+        </div>
+        <div class="comp-row">
+          <span class="comp-service">Tub Recaulk</span>
+          <div class="comp-prices"><span class="price-me">Me: $100</span><span class="price-them">$180+</span></div>
+        </div>
+        <div class="comp-row">
+          <span class="comp-service">Single Tile Replacement</span>
+          <div class="comp-prices"><span class="price-me">Me: $175</span><span class="price-them">$300+</span></div>
+        </div>
+        <div class="comp-row">
+          <span class="comp-service">Grout Sealing Add-On</span>
+          <div class="comp-prices"><span class="price-me">Me: $75</span><span class="price-them">$150+</span></div>
+        </div>
+        <div class="comp-note">Same professional chemicals, same drill-brush technique, same results — at prices that make sense for a homeowner.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">Transparent Pricing</div>
+      <h2>No Hidden Fees.<br><em>Ever.</em></h2>
+      <p class="section-sub">Every quote is upfront before I start. You know the full number before I pick up a single tool.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <span class="price-tag-label">Package 01</span>
+        <h3>Bathroom Clean</h3>
+        <span class="price-amount">$125–$175</span>
+        <div class="price-note">Floor + walls, grout inspected</div>
+        <div class="price-divider"></div>
+        <ul class="price-list">
+          <li>Full deep tile clean</li>
+          <li>Grout scrub &amp; rinse</li>
+          <li>Shop-vac extraction</li>
+          <li>Grout seal add-on +$50</li>
+          <li>Caulk inspection included</li>
+        </ul>
+      </div>
+      <div class="price-card featured reveal">
+        <span class="price-tag-label">Most Popular</span>
+        <h3>Bathroom + Shower Regrout</h3>
+        <span class="price-amount">$350–$500</span>
+        <div class="price-note">Full clean + complete regrout</div>
+        <div class="price-divider"></div>
+        <ul class="price-list">
+          <li>Everything in Bathroom Package</li>
+          <li>Old grout removed cleanly</li>
+          <li>Fresh grout applied &amp; cured</li>
+          <li>All corners recaulked</li>
+          <li>Seal everything +$75</li>
+        </ul>
+      </div>
+      <div class="price-card reveal">
+        <span class="price-tag-label">Package 03</span>
+        <h3>Kitchen Floor</h3>
+        <span class="price-amount">$200–$275</span>
+        <div class="price-note">Deep clean for textured tile</div>
+        <div class="price-divider"></div>
+        <ul class="price-list">
+          <li>Acid-based degrease</li>
+          <li>8–10 min chemical dwell</li>
+          <li>Drill brush scrub by zone</li>
+          <li>Full shop-vac extraction</li>
+          <li>Microfiber finish pass</li>
+        </ul>
+      </div>
+      <div class="price-card reveal">
+        <span class="price-tag-label">Package 04</span>
+        <h3>Full House Clean</h3>
+        <span class="price-amount">$500–$700</span>
+        <div class="price-note">All indoor tile in the home</div>
+        <div class="price-divider"></div>
+        <ul class="price-list">
+          <li>Every tiled room included</li>
+          <li>All tile types handled</li>
+          <li>Natural stone safe methods</li>
+          <li>Grout seal add-on available</li>
+          <li>Caulk inspection included</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">How It Works</div>
+      <h2>Simple. Transparent.<br><em>Done Right.</em></h2>
+      <p class="section-sub">Four steps from first contact to clean tile. No mystery, no surprises.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <span class="step-index">01</span>
+        <h4>Free In-Person Quote</h4>
+        <p>I come to you. I walk through your tile, show you exactly what needs work, and give you a price on the spot — no guessing, no back and forth.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="step-index">02</span>
+        <h4>I Show Up On Time</h4>
+        <p>Scheduled day, confirmed window. I arrive with all tools and supplies. You don't need to provide a thing.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="step-index">03</span>
+        <h4>The Work Gets Done</h4>
+        <p>Section by section, working backwards toward the door. Chemicals dwell, drill brush scrubs, shop vac extracts. No shortcuts.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="step-index">04</span>
+        <h4>Walkthrough &amp; Seal</h4>
+        <p>I walk you through the results, point out anything that needs attention, and offer to seal right then while I'm already there.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">Customer Reviews</div>
+      <h2>Real Reviews.<br><em>Real Homeowners.</em></h2>
+      <p class="section-sub">Every review is from a real customer in Utah County. No scripts, no fake ratings.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="t-quote">"</div>
+        <p class="t-text">My shower grout was black and I thought I'd have to replace the whole thing. Chris came out, spent a few hours, and it looked brand new. Couldn't believe the difference.</p>
+        <div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div>
+        <div class="t-author"><div class="t-name">Sarah T.</div><div class="t-loc">Orem, UT</div></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-quote">"</div>
+        <p class="t-text">Hired Chris to clean our kitchen tile and regrout the bathroom floor. On time, professional, and the price was way better than anyone else I called. Highly recommend.</p>
+        <div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div>
+        <div class="t-author"><div class="t-name">Mike R.</div><div class="t-loc">Provo, UT</div></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-quote">"</div>
+        <p class="t-text">I have travertine floors and was nervous about finding someone who knew how to clean them without damage. Chris knew exactly what to use and the results were incredible.</p>
+        <div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div>
+        <div class="t-author"><div class="t-name">Jennifer K.</div><div class="t-loc">Springville, UT</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">Book a Visit</div>
+      <h2>Free In-Person Quote —<br><em>No Commitment</em></h2>
+      <p class="section-sub">I'll come to you, walk through your tile, and give you a straight number on the spot. Text or fill out the form below.</p>
+    </div>
+    <div class="contact-layout reveal">
+      <div class="contact-left">
+        <div class="contact-detail">
+          <span class="detail-label">Location</span>
+          <span class="detail-value">Orem, Utah</span>
+        </div>
+        <div class="contact-detail">
+          <span class="detail-label">Phone / Text</span>
+          <span class="detail-value"><a href="tel:+18016879723">(801) 687-9723</a></span>
+        </div>
+        <div class="contact-detail">
+          <span class="detail-label">Email</span>
+          <span class="detail-value"><a href="/cdn-cgi/l/email-protection#295b404d4e4c4a5b484f5d5d40454c4a46694e44484045074a4644"><span class="__cf_email__" data-cfemail="84f6ede0e3e1e7f6e5e2f0f0ede8e1e7ebc4e3e9e5ede8aae7ebe9">[email&#160;protected]</span></a></span>
+        </div>
+        <div class="area-note">
+          <strong>Serving Orem &amp; Utah County.</strong> Indoor tile only — kitchens, bathrooms, entryways, showers. Not sure if I cover your area? Just ask.
+        </div>
+      </div>
+      <div class="contact-right">
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane" required></div>
+            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Phone</label><input type="tel" placeholder="(801) 555-0000"></div>
+            <div class="form-group"><label>Email</label><input type="email" placeholder="jane@email.com"></div>
+          </div>
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select>
+              <option value="">Select a service…</option>
+              <option>Tile Deep Clean</option>
+              <option>Grout Regrouting</option>
+              <option>Caulking / Recaulking</option>
+              <option>Tile Replacement</option>
+              <option>Grout or Tile Sealing</option>
+              <option>Natural Stone Cleaning</option>
+              <option>Full House Clean</option>
+              <option>Not sure — just want a quote</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tell Me About Your Tile</label>
+            <textarea placeholder="Bathroom floor? Kitchen tile? Shower grout that's black? Give me a quick description and I'll quote you accurately."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Quote Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Ridgecraft <span>Tile Co.</span></div>
+  <ul class="footer-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2025 Ridgecraft Tile Co. · Orem, Utah</div>
+</footer>
+
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = "Sent — I'll be in touch soon.";
+    btn.style.opacity = '0.6';
+    btn.disabled = true;
+  }
+</script>
+</body>
+</html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">

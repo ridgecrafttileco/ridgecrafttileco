@@ -1,0 +1,26 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Ridgecraft Tile Co.",
+  "url": "https://ridgecrafttileco.com/",
+  "telephone": "+18016879723",
+  "image": "https://ridgecrafttileco.com/assets/before-after/floor-tile-deep-clean.jpg",
+  "priceRange": "$$",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Orem"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Utah County"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Orem",
+    "addressRegion": "UT",
+    "addressCountry": "US"
+  },
+  "description": "Owner-operated tile and grout cleaning, shower regrouting, recaulking, sealing, and tile repair for residential homes in Orem and Utah County."
+}

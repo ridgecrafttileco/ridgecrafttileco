@@ -1,4 +1,4 @@
-const QUOTE_FORM_ENDPOINT = "";
+const QUOTE_FORM_ENDPOINT = "https://usebasin.com/f/8c0018ad43c9";
 const RIDGECRAFT_PHONE_DISPLAY = "(801) 687-9723";
 
 document.addEventListener("DOMContentLoaded", () => {

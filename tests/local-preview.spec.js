@@ -20,6 +20,14 @@ test("all important local preview URLs load", async ({ request }) => {
 });
 
 test("home page lead actions are present and form validates", async ({ page }) => {
+  await page.route("https://usebasin.com/f/8c0018ad43c9", async (route) => {
+    await route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify({ success: true })
+    });
+  });
+
   await page.goto(baseUrl + "/");
   await expect(page.getByRole("heading", { name: /tile and grout cleaning in orem/i })).toBeVisible();
 
@@ -37,5 +45,5 @@ test("home page lead actions are present and form validates", async ({ page }) =
   await page.getByLabel("Text").check();
   await page.locator("#details").fill("Local test only. No real customer information.");
   await page.getByRole("button", { name: /request my free quote/i }).click();
-  await expect(page.locator("#form-status")).toHaveText(/receiving endpoint has not been approved/i);
+  await expect(page.locator("#form-status")).toHaveText(/quote request was sent/i);
 });

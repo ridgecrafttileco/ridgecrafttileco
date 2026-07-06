@@ -1,315 +1,784 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tile and Grout Cleaning in Orem, Utah | Ridgecraft Tile Co.</title>
-  <meta name="description" content="Owner-operated tile and grout cleaning, shower regrouting, recaulking, sealing, and small tile repair for Orem and Utah County homes. Request a free in-person quote.">
-  <link rel="canonical" href="https://ridgecrafttileco.com/">
-  <meta property="og:title" content="Tile and Grout Cleaning in Orem, Utah">
-  <meta property="og:description" content="Deep tile cleaning, shower regrouting, recaulking, sealing, and small tile repairs for Utah County homes.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ridgecrafttileco.com/">
-  <meta property="og:image" content="https://ridgecrafttileco.com/assets/before-after/floor-tile-deep-clean.jpg">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/styles.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Ridgecraft Tile Co.",
-    "url": "https://ridgecrafttileco.com/",
-    "telephone": "+18016879723",
-    "image": "https://ridgecrafttileco.com/assets/before-after/floor-tile-deep-clean.jpg",
-    "priceRange": "$$",
-    "areaServed": [
-      {"@type": "City", "name": "Orem"},
-      {"@type": "AdministrativeArea", "name": "Utah County"}
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Orem",
-      "addressRegion": "UT",
-      "addressCountry": "US"
-    },
-    "description": "Owner-operated tile and grout cleaning, shower regrouting, recaulking, sealing, and tile repair for residential homes in Orem and Utah County.",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Residential tile restoration services",
-      "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tile and grout cleaning"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Shower regrouting"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Recaulking"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Grout sealing"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tile repair"}}
-      ]
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Ridgecraft Tile Co. — Tile Cleaning, Regrouting & Repair in Orem, Utah</title>
+<meta name="description" content="Owner-operated tile cleaning, regrouting, recaulking, sealing, natural stone care, and small tile repair for Orem and Utah County homes. Request a free quote.">
+<link rel="canonical" href="https://ridgecrafttileco.com/">
+<meta property="og:title" content="Ridgecraft Tile Co. — Tile Cleaning & Repair in Orem, Utah">
+<meta property="og:description" content="Tile cleaning, regrouting, recaulking, sealing, and repair for Orem and Utah County homes. Free quotes before work starts.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ridgecrafttileco.com/">
+<meta property="og:image" content="https://ridgecrafttileco.com/assets/before-after/floor-tile-deep-clean.jpg">
+<meta name="google-site-verification" content="jKaxxvhL-jU13mnz7AdlVi9jnVOqjn01gvY-TZCinXU" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --ink:#1a1a1a;--text:#333;--secondary:#555;--muted:#888;
+    --faint:#b0b0b0;--rule:#d8d8d8;--bg-warm:#faf9f7;--bg:#fff;
+    --gold:#c4a265;--gold-dark:#a8884d;--gold-pale:#f5edd8;--gold-soft:#faf5eb;
+    --orange:#c2612c;--orange-light:#d4753f;--orange-soft:#fdf0e8;
+    --dark:#1c1c1c;
+    --tile-size:54px;
+    --serif:'Crimson Pro',serif;--sans:'Source Sans 3',sans-serif;
   }
-  </script>
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:hidden;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+  /* ═══ TILE GRID MOTIF — dark sections only ═══ */
+  .tile-grid{
+    position:absolute;inset:0;pointer-events:none;overflow:hidden;
+  }
+  /* base grout lines */
+  .tile-grid::before{
+    content:'';position:absolute;
+    top:-54px;left:-54px;
+    width:calc(100% + 108px);
+    height:calc(100% + 108px);
+    background-image:
+      linear-gradient(rgba(196,162,101,0.13) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(196,162,101,0.13) 1px,transparent 1px);
+    background-size:var(--tile-size) var(--tile-size);
+    animation:gridDrift 14s linear infinite;
+  }
+  /* light etching through grout */
+  .tile-grid::after{
+    content:'';position:absolute;
+    top:-54px;left:-54px;
+    width:calc(100% + 108px);
+    height:calc(100% + 108px);
+    background-image:
+      linear-gradient(rgba(196,162,101,0.5) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(196,162,101,0.5) 1px,transparent 1px);
+    background-size:var(--tile-size) var(--tile-size);
+    -webkit-mask-image:linear-gradient(
+      135deg,
+      transparent 0%,transparent 35%,
+      rgba(0,0,0,0.5) 42%,
+      black 50%,
+      rgba(0,0,0,0.5) 58%,
+      transparent 65%,transparent 100%
+    );
+    mask-image:linear-gradient(
+      135deg,
+      transparent 0%,transparent 35%,
+      rgba(0,0,0,0.5) 42%,
+      black 50%,
+      rgba(0,0,0,0.5) 58%,
+      transparent 65%,transparent 100%
+    );
+    -webkit-mask-size:350% 350%;
+    mask-size:350% 350%;
+    animation:gridDrift 14s linear infinite,groutLight 5s ease-in-out infinite;
+  }
+  @keyframes gridDrift{
+    from{transform:translate(0,0)}
+    to{transform:translate(54px,54px)}
+  }
+  @keyframes groutLight{
+    0%{-webkit-mask-position:0% 100%;mask-position:0% 100%}
+    100%{-webkit-mask-position:100% 0%;mask-position:100% 0%}
+  }
+
+  /* ═══ NAV ═══ */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--dark);border-bottom:1px solid #2a2a2a}
+  .nav-inner{display:flex;justify-content:space-between;align-items:center;width:100%;padding:0.9rem 3rem}
+  .nav-logo{display:flex;align-items:center;gap:0.85rem;text-decoration:none;flex-shrink:0}
+  .nav-logo-text{display:flex;flex-direction:column;line-height:1}
+  .nav-logo-name{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:#fff;letter-spacing:0.1em}
+  .nav-logo-sub{font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-top:0.18rem}
+  .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+  .nav-links a{color:#999;text-decoration:none;font-size:0.92rem;font-weight:500;transition:color 0.2s;white-space:nowrap}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{background:var(--orange)!important;color:#fff!important;padding:0.5rem 1.1rem!important;border-radius:4px!important;font-weight:700!important;transition:background 0.2s!important}
+  .nav-cta:hover{background:var(--orange-light)!important}
+  .nav-phone{display:none;color:var(--gold);font-weight:600;font-size:0.85rem;text-decoration:none}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;z-index:200}
+  .hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:1px;transition:0.3s}
+  .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+  .hamburger.active span:nth-child(2){opacity:0}
+  .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+  .mobile-menu{display:none;position:fixed;inset:0;background:var(--dark);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:1.8rem}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{font-size:1.15rem;font-weight:500;color:#ccc;text-decoration:none;letter-spacing:0.04em}
+  .mobile-menu .mm-cta{background:var(--orange);color:#fff;padding:0.85rem 2rem;border-radius:6px;font-weight:700}
+  .mobile-menu .mm-phone{color:var(--gold);font-size:1.25rem;font-weight:700;margin-top:0.5rem;display:flex;align-items:center;gap:0.4rem}
+
+  /* ═══ HERO ═══ */
+  .hero-wrapper{
+    margin-top:52px;
+    background:var(--bg);
+    padding:2rem;
+  }
+  .hero{
+    background:var(--dark);
+    padding:5.5rem 2rem 5rem;
+    position:relative;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;
+    min-height:75vh;
+    border-radius:4px;
+  }
+  .hero::after{
+    content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,transparent 10%,var(--gold) 50%,transparent 90%);
+  }
+  .hero-content{position:relative;z-index:2;max-width:700px}
+  .hero-tagline{
+    font-family:var(--serif);
+    font-size:clamp(2.2rem,4.5vw,3.6rem);
+    font-weight:400;color:#fff;line-height:1.15;
+    margin-bottom:1.2rem;
+    text-shadow:0 2px 20px rgba(0,0,0,0.5);
+  }
+  .hero-tagline em{font-style:italic;color:var(--gold)}
+  .hero-sub{
+    font-size:1.05rem;color:#999;line-height:1.7;
+    max-width:500px;margin:0 auto 2.5rem;
+    text-shadow:0 1px 8px rgba(0,0,0,0.4);
+  }
+  .hero-actions{display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center;margin-bottom:3rem}
+  .btn-primary{display:inline-block;background:var(--orange);color:#fff;padding:0.85rem 2rem;text-decoration:none;font-size:0.88rem;font-weight:700;border-radius:4px;transition:background 0.2s}
+  .btn-primary:hover{background:var(--orange-light)}
+  .btn-secondary{display:inline-block;background:var(--gold);color:var(--dark);padding:0.85rem 2rem;text-decoration:none;font-size:0.88rem;font-weight:700;border-radius:4px;transition:background 0.2s}
+  .btn-secondary:hover{background:var(--gold-dark)}
+  .hero-facts{display:flex;gap:3rem;justify-content:center;padding-top:2rem;border-top:1px solid #2a2a2a}
+  .hero-fact-num{font-family:var(--serif);font-size:1.8rem;font-weight:400;color:#fff;line-height:1;display:block}
+  .hero-fact-label{font-size:0.75rem;color:#555;margin-top:0.25rem;display:block}
+  .hero-location{
+    font-size:0.72rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:1.5rem;
+    display:flex;align-items:center;justify-content:center;gap:0.6rem;
+  }
+  .hero-location::before,.hero-location::after{content:'';width:20px;height:1px;background:var(--gold);opacity:0.5}
+
+  /* ═══ PROMISE ═══ */
+  .promise{background:var(--bg);border-bottom:1px solid var(--rule);padding:3.5rem 2rem;position:relative;overflow:hidden}
+  .promise-inner{max-width:740px;margin:0 auto;position:relative;z-index:2}
+  .promise-text{font-family:var(--serif);font-size:1.25rem;font-weight:400;color:var(--ink);line-height:1.5;margin-bottom:1rem}
+  .promise-text em{font-style:italic;color:var(--orange);font-weight:500}
+  .promise-sub{font-size:0.95rem;color:var(--secondary);line-height:1.7;padding-left:1.2rem;border-left:3px solid var(--gold)}
+
+  /* ═══ SHARED ═══ */
+  section{padding:4.5rem 2rem;position:relative;overflow:hidden}
+  .wrap{max-width:1100px;margin:0 auto;position:relative;z-index:2}
+  .section-label{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:0.6rem}
+  h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:400;line-height:1.2;color:var(--ink);margin-bottom:0.6rem}
+  h2 em{font-style:italic}
+  .section-desc{color:var(--secondary);font-size:0.95rem;line-height:1.7;max-width:480px;margin-bottom:2.5rem}
+
+  /* ═══ SERVICES ═══ */
+  #services{border-top:1px solid var(--rule)}
+  .services-list{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+  .svc{padding:1.8rem 2rem 1.8rem 0;border-bottom:1px solid var(--rule)}
+  .svc:nth-child(3n+2){padding-left:2rem;padding-right:2rem;border-left:1px solid var(--rule);border-right:1px solid var(--rule)}
+  .svc:nth-child(3n+3){padding-left:2rem;padding-right:0}
+  .svc-num{font-family:var(--serif);font-size:0.85rem;font-style:italic;color:var(--faint);display:block;margin-bottom:0.7rem}
+  .svc h3{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--ink);margin-bottom:0.5rem;line-height:1.3}
+  .svc p{font-size:0.88rem;color:var(--secondary);line-height:1.65}
+  .svc-price{display:inline-block;margin-top:0.9rem;font-size:0.78rem;font-weight:600;color:var(--orange)}
+
+  /* ═══ BEFORE / AFTER SLIDERS ═══ */
+  #results{background:var(--bg-warm);border-top:1px solid var(--rule)}
+  .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+  .ba-single{max-width:700px}
+
+
+  .ba-slider{
+    position:relative;overflow:hidden;border-radius:6px;
+    border:1px solid var(--rule);background:var(--bg);
+    cursor:col-resize;-webkit-user-select:none;user-select:none;
+    aspect-ratio:4/3;
+  }
+  .ba-layer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+
+  /* Before = dirty tile pattern */
+  .ba-before{
+    background:
+      repeating-linear-gradient(0deg,#bbb3a4 0px,#bbb3a4 2px,transparent 2px,transparent 60px),
+      repeating-linear-gradient(90deg,#bbb3a4 0px,#bbb3a4 2px,transparent 2px,transparent 60px),
+      linear-gradient(135deg,#d5cdc0 0%,#c8bfb0 50%,#d0c7b8 100%);
+  }
+  /* brown stain splotches on before */
+  .ba-before::after{
+    content:'';position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 40px 30px at 25% 35%,rgba(120,95,60,0.25),transparent),
+      radial-gradient(ellipse 55px 25px at 60% 20%,rgba(100,80,50,0.2),transparent),
+      radial-gradient(ellipse 35px 45px at 75% 65%,rgba(110,85,55,0.22),transparent),
+      radial-gradient(ellipse 50px 35px at 40% 75%,rgba(105,82,52,0.18),transparent),
+      radial-gradient(ellipse 30px 30px at 15% 80%,rgba(95,75,45,0.2),transparent),
+      radial-gradient(ellipse 45px 20px at 85% 40%,rgba(115,90,58,0.15),transparent);
+  }
+
+  /* After = clean tile pattern */
+  .ba-after{
+    background:
+      repeating-linear-gradient(0deg,#e0d8c8 0px,#e0d8c8 2px,transparent 2px,transparent 60px),
+      repeating-linear-gradient(90deg,#e0d8c8 0px,#e0d8c8 2px,transparent 2px,transparent 60px),
+      linear-gradient(135deg,#f5f0e8 0%,#ebe5da 50%,#f2ece2 100%);
+    clip-path:inset(0 50% 0 0);
+    transition:clip-path 0s;
+  }
+  /* subtle clean sheen on after */
+  .ba-after::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(135deg,transparent 30%,rgba(255,255,255,0.15) 50%,transparent 70%);
+  }
+
+  /* dark grout version (shower) */
+  .ba-before-dark{
+    background:
+      repeating-linear-gradient(0deg,#444 0px,#444 3px,transparent 3px,transparent 50px),
+      repeating-linear-gradient(90deg,#444 0px,#444 3px,transparent 3px,transparent 50px),
+      linear-gradient(135deg,#d0c8bb 0%,#c5bba8 100%);
+  }
+  .ba-before-dark::after{
+    content:'';position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 60px 40px at 30% 30%,rgba(40,35,25,0.3),transparent),
+      radial-gradient(ellipse 40px 50px at 70% 60%,rgba(50,40,30,0.25),transparent),
+      radial-gradient(ellipse 50px 30px at 50% 85%,rgba(45,38,28,0.2),transparent),
+      radial-gradient(ellipse 35px 35px at 85% 25%,rgba(55,45,32,0.22),transparent);
+  }
+  .ba-after-dark{
+    background:
+      repeating-linear-gradient(0deg,#d4cbbe 0px,#d4cbbe 2px,transparent 2px,transparent 50px),
+      repeating-linear-gradient(90deg,#d4cbbe 0px,#d4cbbe 2px,transparent 2px,transparent 50px),
+      linear-gradient(135deg,#f0ebe2 0%,#e8e2d5 100%);
+    clip-path:inset(0 50% 0 0);
+  }
+  .ba-after-dark::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(135deg,transparent 30%,rgba(255,255,255,0.12) 50%,transparent 70%);
+  }
+
+  /* kitchen floor version (textured smaller tiles) */
+  .ba-before-kitchen{
+    background:
+      repeating-linear-gradient(0deg,#b0a898 0px,#b0a898 2px,transparent 2px,transparent 40px),
+      repeating-linear-gradient(90deg,#b0a898 0px,#b0a898 2px,transparent 2px,transparent 40px),
+      linear-gradient(135deg,#c8c0b2 0%,#beb5a5 100%);
+  }
+  .ba-before-kitchen::after{
+    content:'';position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 80px 60px at 40% 50%,rgba(100,85,55,0.2),transparent),
+      radial-gradient(ellipse 50px 40px at 75% 30%,rgba(110,90,60,0.15),transparent),
+      radial-gradient(ellipse 60px 50px at 20% 75%,rgba(95,78,48,0.18),transparent);
+  }
+  .ba-after-kitchen{
+    background:
+      repeating-linear-gradient(0deg,#ddd5c5 0px,#ddd5c5 2px,transparent 2px,transparent 40px),
+      repeating-linear-gradient(90deg,#ddd5c5 0px,#ddd5c5 2px,transparent 2px,transparent 40px),
+      linear-gradient(135deg,#f2ece0 0%,#ebe4d6 100%);
+    clip-path:inset(0 50% 0 0);
+  }
+  .ba-after-kitchen::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(135deg,transparent 30%,rgba(255,255,255,0.12) 50%,transparent 70%);
+  }
+
+  /* slider handle */
+  .ba-handle{
+    position:absolute;top:0;bottom:0;left:50%;
+    width:3px;background:var(--bg);
+    z-index:10;transform:translateX(-50%);
+    box-shadow:0 0 8px rgba(0,0,0,0.15);
+    transition:left 0s;
+  }
+  .ba-handle-grip{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:36px;height:36px;border-radius:50%;
+    background:var(--bg);border:2px solid var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+  }
+  .ba-handle-grip svg{color:var(--gold)}
+
+  .ba-tag{
+    position:absolute;top:12px;z-index:5;
+    font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+    padding:0.3rem 0.65rem;border-radius:3px;
+  }
+  .ba-tag-before{left:12px;background:rgba(0,0,0,0.55);color:#fff}
+  .ba-tag-after{right:12px;background:var(--orange);color:#fff}
+
+  .ba-info{padding:1.1rem 0 0}
+  .ba-info h4{font-family:var(--serif);font-size:1.05rem;color:var(--ink);margin-bottom:0.15rem}
+  .ba-info p{font-size:0.82rem;color:var(--muted)}
+
+  .ba-instruction{
+    text-align:center;margin-top:1rem;
+    font-size:0.78rem;color:var(--faint);font-style:italic;
+  }
+
+  .results-note{text-align:center;margin-top:2rem;font-size:0.88rem;color:var(--secondary)}
+  .results-note a{color:var(--orange);font-weight:600;text-decoration:none}
+  .results-note a:hover{text-decoration:underline}
+
+  /* ═══ WHY ═══ */
+  #why{border-top:1px solid var(--rule)}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+  .why-item{padding:1.3rem 0;border-bottom:1px solid var(--rule)}
+  .why-item:first-child{border-top:1px solid var(--rule)}
+  .why-item h4{font-family:var(--serif);font-size:1.05rem;font-weight:500;color:var(--ink);margin-bottom:0.3rem}
+  .why-item p{font-size:0.88rem;color:var(--secondary);line-height:1.65}
+  .comp-header{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);padding-bottom:0.8rem;border-bottom:2px solid var(--ink);display:grid;grid-template-columns:1fr auto auto;gap:1rem}
+  .comp-header span:nth-child(2),.comp-header span:nth-child(3){text-align:right}
+  .comp-row{display:grid;grid-template-columns:1fr auto auto;gap:1rem;padding:0.7rem 0;border-bottom:1px solid var(--rule);font-size:0.88rem;align-items:center}
+  .comp-service{color:var(--secondary)}
+  .comp-us{font-weight:700;color:var(--orange);text-align:right}
+  .comp-them{color:var(--faint);text-decoration:line-through;text-align:right}
+  .comp-note{margin-top:1rem;font-size:0.82rem;color:var(--muted);line-height:1.65;font-style:italic}
+
+  /* ═══ GUARANTEE ═══ */
+  .guarantee{background:var(--dark);padding:2.5rem 2rem;text-align:center;position:relative;overflow:hidden}
+  .guarantee::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 10%,var(--gold) 50%,transparent 90%)}
+  .guarantee-inner{max-width:620px;margin:0 auto;position:relative;z-index:2}
+  .guarantee-inner h3{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:#fff;margin-bottom:0.5rem}
+  .guarantee-inner h3 em{font-style:normal;color:var(--gold)}
+  .guarantee-inner p{font-size:0.9rem;color:#777;line-height:1.7}
+
+  /* ═══ PRICING ═══ */
+  #pricing{background:var(--bg-warm);border-top:1px solid var(--rule)}
+  .pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--ink)}
+  .pkg{padding:1.8rem 1.5rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .pkg:last-child{border-right:none}
+  .pkg.featured{background:var(--orange-soft);border-top:3px solid var(--orange)}
+  .pkg-label{font-size:0.68rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.8rem;display:block}
+  .pkg.featured .pkg-label{color:var(--orange)}
+  .pkg h3{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink);margin-bottom:0.6rem;line-height:1.25}
+  .pkg-price{font-family:var(--serif);font-size:1.7rem;font-weight:400;color:var(--ink);display:block;margin-bottom:0.2rem}
+  .pkg.featured .pkg-price{color:var(--orange)}
+  .pkg-note{font-size:0.78rem;color:var(--muted);margin-bottom:1.2rem}
+  .pkg-list{list-style:none;display:flex;flex-direction:column;gap:0.4rem}
+  .pkg-list li{font-size:0.82rem;color:var(--secondary);line-height:1.5}
+  .pkg-list li::before{content:'— ';color:var(--faint)}
+
+  /* ═══ PROCESS ═══ */
+  #process{border-top:1px solid var(--rule)}
+  .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+  .step-num{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--gold-pale);display:block;margin-bottom:0.8rem;line-height:1}
+  .step h4{font-family:var(--serif);font-size:1.05rem;font-weight:500;color:var(--ink);margin-bottom:0.4rem}
+  .step p{font-size:0.85rem;color:var(--secondary);line-height:1.65}
+
+  /* ═══ TESTIMONIALS ═══ */
+  #testimonials{background:var(--bg-warm);border-top:1px solid var(--rule)}
+  .testimonials-list{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
+  .tcard-stars{display:flex;gap:2px;margin-bottom:0.8rem}
+  .tcard-star{width:13px;height:13px;background:var(--gold);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+  .tcard-text{font-family:var(--serif);font-size:1.02rem;font-weight:400;font-style:italic;color:var(--text);line-height:1.65;margin-bottom:1rem}
+  .tcard-author{border-top:1px solid var(--rule);padding-top:0.8rem}
+  .tcard-name{font-size:0.82rem;font-weight:600;color:var(--ink)}
+  .tcard-loc{font-size:0.78rem;color:var(--muted)}
+
+  /* ═══ CONTACT ═══ */
+  #contact{border-top:1px solid var(--rule)}
+  .contact-grid{display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start}
+  .contact-block{margin-bottom:1.5rem}
+  .contact-block-label{font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:0.2rem}
+  .contact-block-value{font-family:var(--serif);font-size:1.1rem;color:var(--ink)}
+  .contact-block-value a{color:var(--ink);text-decoration:none}
+  .contact-block-value a:hover{color:var(--orange)}
+  .area-note{font-size:0.82rem;color:var(--secondary);line-height:1.65;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--rule)}
+  .area-note strong{color:var(--ink)}
+  .contact-form{display:flex;flex-direction:column;gap:1rem}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .form-group{display:flex;flex-direction:column;gap:0.3rem}
+  .form-group label{font-size:0.72rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted)}
+  .form-group input,.form-group select,.form-group textarea{border:1px solid var(--rule);border-radius:4px;padding:0.7rem 0.85rem;font-family:var(--sans);font-size:16px;color:var(--ink);background:var(--bg);outline:none;transition:border-color 0.2s;-webkit-appearance:none}
+  .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}
+  .form-group textarea{resize:vertical;min-height:100px}
+  .form-submit{background:var(--orange);color:#fff;border:none;padding:0.8rem 2rem;font-family:var(--sans);font-size:0.85rem;font-weight:700;cursor:pointer;border-radius:4px;transition:background 0.2s;align-self:flex-start}
+  .form-submit:hover{background:var(--orange-light)}
+
+
+
+
+  .proof-photo{margin:0;max-width:720px;border:1px solid var(--rule);border-radius:6px;background:var(--bg);overflow:hidden}
+  .proof-photo img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+  .proof-photo figcaption{padding:0.9rem 1rem;font-size:0.82rem;color:var(--muted);line-height:1.5}
+  .pricing-grid{grid-template-columns:repeat(3,1fr)}
+  .pricing-note{margin-top:1.3rem;font-size:0.9rem;color:var(--secondary);line-height:1.7;max-width:760px}
+  .pkg-list.compact{gap:0.55rem}
+  .pkg-list.compact li{font-size:0.86rem}
+  .contact-method{border:1px solid var(--rule);border-radius:4px;padding:0.85rem;display:flex;gap:1rem;flex-wrap:wrap}
+  .contact-method legend{font-size:0.72rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);padding:0 0.3rem}
+  .contact-method label{display:flex;align-items:center;gap:0.4rem;font-size:0.9rem;color:var(--secondary)}
+  .honeypot{position:absolute;left:-9999px;opacity:0;pointer-events:none}
+  .field-error{display:block;margin-top:0.25rem;font-size:0.78rem;color:#a33}
+  [aria-invalid="true"]{border-color:#a33!important}
+  .form-status{min-height:1.4rem;font-size:0.88rem;line-height:1.5}
+  .form-status.success{color:#2f6f42}.form-status.error{color:#a33}
+  .privacy{font-size:0.78rem;color:var(--muted);line-height:1.5}
+  .full-button{align-self:flex-start}
+
+  /* ═══ FOOTER ═══ */
+  footer{background:var(--dark);padding:2.2rem 2rem;position:relative;overflow:hidden}
+  .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;position:relative;z-index:2}
+  .footer-logo{display:flex;align-items:center;gap:0.6rem}
+  .footer-logo-text{display:flex;flex-direction:column;line-height:1}
+  .footer-logo-name{font-family:var(--serif);font-size:0.95rem;font-weight:600;color:#fff;letter-spacing:0.08em}
+  .footer-logo-sub{font-size:0.5rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-top:0.1rem}
+  .footer-links{display:flex;gap:1.5rem;list-style:none}
+  .footer-links a{font-size:0.78rem;color:#555;text-decoration:none;transition:color 0.2s}
+  .footer-links a:hover{color:#fff}
+  .footer-copy{font-size:0.75rem;color:#444}
+
+  /* ═══ MOBILE CTA ═══ */
+  .mobile-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--dark);border-top:1px solid #333}
+  .mobile-cta-bar a{display:flex;align-items:center;justify-content:center;gap:0.45rem;padding:0.85rem 0.6rem;color:#fff;text-decoration:none;font-weight:700;font-size:0.9rem;text-align:center}
+  .mobile-cta-bar a:first-child{background:var(--orange)}
+  .mobile-cta-bar a:last-child{background:var(--gold);color:var(--dark)}
+
+  /* ═══ RESPONSIVE ═══ */
+  @media(max-width:900px){
+    .services-list{grid-template-columns:1fr 1fr}
+    .svc{padding:1.5rem 0;border-left:none!important;border-right:none!important}
+    .svc:nth-child(odd){padding-right:1.5rem;border-right:1px solid var(--rule)!important}
+    .svc:nth-child(even){padding-left:1.5rem}
+    .pricing-grid{grid-template-columns:1fr 1fr}
+    .pkg:nth-child(2){border-right:none}
+    .process-steps{grid-template-columns:1fr 1fr}
+    .why-grid{grid-template-columns:1fr;gap:2.5rem}
+    .testimonials-list{grid-template-columns:1fr;gap:2rem}
+    .contact-grid{grid-template-columns:1fr}
+
+  }
+  @media(max-width:650px){
+    .nav-inner{padding:0.55rem 1rem}
+    .nav-logo-name{font-size:0.9rem}
+    .nav-logo-sub{font-size:0.48rem}
+    .nav-links{display:none}
+    .hamburger{display:flex}
+    .nav-phone{display:block}
+    section{padding:3rem 1.2rem}
+    .hero-wrapper{padding:0.8rem}
+    .hero{padding:4rem 1.2rem 3.5rem;min-height:auto}
+    .hero-tagline{font-size:2rem}
+    .hero-sub{font-size:0.95rem}
+    .hero-facts{gap:1.5rem;flex-wrap:wrap;justify-content:flex-start}
+    .hero-fact-num{font-size:1.5rem}
+    .hero-fact-label{font-size:0.72rem}
+    .promise{padding:2.5rem 1.2rem}
+    .promise-text{font-size:1.1rem}
+    .services-list,.pricing-grid,.process-steps{grid-template-columns:1fr}
+    .svc{padding:1.3rem 0!important;border-left:none!important;border-right:none!important}
+    .pkg{border-right:none}
+
+    .form-row{grid-template-columns:1fr}
+    .footer-inner{flex-direction:column;text-align:center}
+    .footer-logo{justify-content:center}
+    .footer-links{flex-wrap:wrap;justify-content:center}
+    .mobile-cta-bar{display:grid;grid-template-columns:1fr 1fr}
+    footer,#contact{padding-bottom:5.5rem}
+    .guarantee{padding:2rem 1.2rem}
+  }
+  @media(max-width:380px){
+    .hero-wrapper{padding:0.5rem}
+    .hero-tagline{font-size:1.7rem}
+    .nav-logo-name{font-size:0.8rem;letter-spacing:0.06em}
+    .btn-primary,.btn-secondary{padding:0.75rem 1.4rem;font-size:0.82rem}
+  }
+
+  .reveal{opacity:1;transform:none}
+  .rd1{transition-delay:0.08s}.rd2{transition-delay:0.16s}.rd3{transition-delay:0.24s}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Ridgecraft Tile Co.",
+  "url": "https://ridgecrafttileco.com/",
+  "telephone": "+18016879723",
+  "image": "https://ridgecrafttileco.com/assets/before-after/floor-tile-deep-clean.jpg",
+  "priceRange": "$",
+  "areaServed": [
+    {"@type": "City", "name": "Orem"},
+    {"@type": "AdministrativeArea", "name": "Utah County"}
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Orem",
+    "addressRegion": "UT",
+    "addressCountry": "US"
+  },
+  "description": "Owner-operated tile and grout cleaning, shower regrouting, recaulking, sealing, natural stone care, and small tile repair for residential homes in Orem and Utah County.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Residential tile restoration services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bathroom tile cleaning"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kitchen and entry tile cleaning"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tile and grout sealing"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Recaulking"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Shower regrouting and restoration"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Single-tile repair"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Natural stone care"}}
+    ]
+  }
+}
+</script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <nav class="nav wrap" aria-label="Primary">
-      <a class="brand" href="/" aria-label="Ridgecraft Tile Co. home">
-        <span class="brand-mark">R</span>
-        <span>
-          <strong>Ridgecraft Tile Co.</strong>
-          <small>Orem and Utah County</small>
-        </span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
-      <div class="nav-menu" id="nav-menu">
-        <a href="/tile-cleaning-orem/">Tile Cleaning</a>
-        <a href="/grout-repair-orem/">Grout Repair</a>
-        <a href="/shower-regrouting-orem/">Shower Regrouting</a>
-        <a href="/tile-cleaning-utah-county/">Service Area</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#quote">Quote</a>
-      </div>
-      <a class="nav-phone" href="tel:+18016879723">Call or Text (801) 687-9723</a>
-    </nav>
-  </header>
 
-  <main id="main">
-    <section class="hero section">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Orem and Utah County residential tile cleaning</p>
-          <h1>Tile and grout cleaning in Orem, Utah</h1>
-          <p class="lede">Deep tile cleaning, shower regrouting, recaulking, sealing, and small tile repairs for Utah County homes. Owner-operated work, clear in-person pricing, and no franchise markup games.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#quote">Request a Free In-Person Quote</a>
-            <a class="button secondary" href="tel:+18016879723">Call for a Free Quote</a>
-          </div>
-          <ul class="trust-strip" aria-label="Service highlights">
-            <li>Orem based</li>
-            <li>Serving Utah County</li>
-            <li>Indoor tile only</li>
-            <li>Quote before work starts</li>
-          </ul>
-        </div>
-        <figure class="proof-figure">
-          <img src="/assets/before-after/floor-tile-deep-clean.jpg" width="1200" height="900" alt="Before and after tile and grout cleaning on a Utah County tile floor" fetchpriority="high">
-          <figcaption>Orem-style bathroom floor | Deep clean and clear grout sealer</figcaption>
-        </figure>
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <svg width="28" height="28" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="100" height="100" fill="#252420"/>
+        <rect x="8" y="8" width="40" height="40" fill="#1a1a18"/>
+        <rect x="52" y="8" width="40" height="40" fill="#b8965a"/>
+        <rect x="8" y="52" width="40" height="40" fill="#b8965a"/>
+        <rect x="52" y="52" width="40" height="40" fill="#1a1a18"/>
+      </svg>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">RIDGECRAFT</span>
+        <span class="nav-logo-sub">Tile Co.</span>
       </div>
-    </section>
+    </a>
+    <a href="tel:+18016879723" class="nav-phone">(801) 687-9723</a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="/tile-cleaning-orem/">Tile Cleaning</a></li>
+      <li><a href="/grout-repair-orem/">Grout Repair</a></li>
+      <li><a href="/shower-regrouting-orem/">Shower Regrouting</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact" class="nav-cta">Free Quote</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu" type="button"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="/tile-cleaning-orem/" onclick="closeMenu()">Tile Cleaning</a>
+  <a href="/grout-repair-orem/" onclick="closeMenu()">Grout Repair</a>
+  <a href="/shower-regrouting-orem/" onclick="closeMenu()">Shower Regrouting</a>
+  <a href="/tile-cleaning-utah-county/" onclick="closeMenu()">Service Area</a>
+  <a href="#pricing" onclick="closeMenu()">Pricing</a>
+  <a href="#contact" class="mm-cta" onclick="closeMenu()">Free Quote</a>
+  <a href="tel:+18016879723" class="mm-phone" onclick="closeMenu()">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    (801) 687-9723
+  </a>
+</div>
 
-    <section class="section">
-      <div class="wrap narrow">
-        <p class="section-kicker">The right repair beats replacement</p>
-        <h2>Most tile does not need to be replaced.</h2>
-        <p>It needs the right cleaning process, fresh grout where old grout has failed, and sealing so it stays clean longer. Ridgecraft helps homeowners restore tile floors, showers, bathrooms, kitchens, entries, and natural stone without the runaround.</p>
-      </div>
-    </section>
+<!-- HERO -->
+<div class="hero-wrapper">
+<section class="hero" id="home">
+  <div class="tile-grid"></div>
+  <div class="hero-content">
+    <div class="hero-location reveal">Orem &amp; Utah County</div>
+    <h1 class="hero-tagline reveal">Your Tile, <em>Restored.</em></h1>
+    <p class="hero-sub reveal">Tile cleaning, regrouting, recaulking, sealing, and repair for Utah County homes. Straight quotes, careful work, and no sales fog.</p>
+    <div class="hero-actions reveal">
+      <a href="#contact" class="btn-primary">Get a Free Quote</a>
+      <a href="tel:+18016879723" class="btn-secondary">Call (801) 687-9723</a>
+    </div>
+    <div class="hero-facts reveal">
+      <div class="hero-fact"><span class="hero-fact-num">Orem</span><span class="hero-fact-label">Based</span></div>
+      <div class="hero-fact"><span class="hero-fact-num">Free</span><span class="hero-fact-label">Quotes</span></div>
+      <div class="hero-fact"><span class="hero-fact-num">Indoor</span><span class="hero-fact-label">Tile Work</span></div>
+    </div>
+  </div>
+</section>
+</div>
 
-    <section class="section muted" id="services">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="section-kicker">Services</p>
-          <h2>Tile problems we fix every week</h2>
-        </div>
-        <div class="card-grid three">
-          <article class="card">
-            <h3>Deep tile and grout cleaning</h3>
-            <p>For dirty grout lines, textured kitchen tile, entryways, bathroom floors, and buildup that mopping will not touch.</p>
-            <a href="/tile-cleaning-orem/">Tile cleaning in Orem</a>
-          </article>
-          <article class="card">
-            <h3>Shower regrouting</h3>
-            <p>For black, cracked, missing, or failing shower grout. Old grout is removed carefully and new grout is installed cleanly.</p>
-            <a href="/shower-regrouting-orem/">Shower regrouting details</a>
-          </article>
-          <article class="card">
-            <h3>Recaulking</h3>
-            <p>For moldy, peeling, cracked, or separated caulk around tubs, showers, corners, fixtures, and edges.</p>
-            <a href="#quote">Ask about recaulking</a>
-          </article>
-          <article class="card">
-            <h3>Grout repair</h3>
-            <p>For failed, cracked, loose, stained, or missing grout on bathroom floors, kitchens, entries, and showers.</p>
-            <a href="/grout-repair-orem/">Grout repair in Orem</a>
-          </article>
-          <article class="card">
-            <h3>Grout sealing</h3>
-            <p>After cleaning or regrouting, clear sealer helps grout resist dirt and staining. It is one of the smartest add-ons.</p>
-            <a href="#pricing">See sealer pricing</a>
-          </article>
-          <article class="card">
-            <h3>Natural stone care</h3>
-            <p>For travertine, marble, limestone, slate, and other stone that needs safer products and a more careful process.</p>
-            <a href="#quote">Request a stone quote</a>
-          </article>
-        </div>
-      </div>
-    </section>
+<!-- PROMISE -->
+<div class="promise">
+  <div class="promise-inner">
+    <h2 class="reveal">Tile and grout cleaning in Orem, Utah.</h2>
+    <p class="promise-text reveal">Most tile does not need to be replaced. It needs the right clean, fresh grout where old grout has failed, and sealer where it makes sense.</p>
+    <p class="promise-sub reveal">Send a few photos or request an in-person quote. You'll get a practical recommendation before anyone picks up a tool.</p>
+  </div>
+</div>
 
-    <section class="section" id="proof">
-      <div class="wrap split">
-        <div>
-          <p class="section-kicker">Before and after proof</p>
-          <h2>Real tile, real grout, real cleanup.</h2>
-          <p>Ridgecraft uses before-and-after photos by city and service so homeowners can judge the work before asking for a quote. Verified public reviews should be added here once the Google profile and review source are confirmed.</p>
-          <ul class="check-list">
-            <li>Photos show the actual type of work being quoted.</li>
-            <li>Service and city labels keep the proof local.</li>
-            <li>No unsupported savings or review claims.</li>
-          </ul>
-        </div>
-        <figure class="proof-figure compact">
-          <img src="/assets/before-after/floor-tile-deep-clean.jpg" width="1200" height="900" alt="Cleaned tile and grout result from a residential tile floor">
-          <figcaption>Text photos of your tile and Chris will tell you whether cleaning, sealing, or regrouting makes sense.</figcaption>
-        </figure>
-      </div>
-    </section>
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-label reveal">Services</div>
+    <h2 class="reveal">Indoor Tile Work <em>Done Carefully</em></h2>
+    <p class="section-desc reveal">Bathrooms, showers, kitchens, entries, grout, caulk, stone, and small tile repairs around Orem and Utah County.</p>
+    <div class="services-list">
+      <div class="svc reveal"><span class="svc-num">i</span><h3>Bathroom Tile Cleaning</h3><p>Deep cleaning for bathroom floors, walls, and grout lines with a process matched to the tile and condition.</p><span class="svc-price">Starting at $149</span></div>
+      <div class="svc reveal rd1"><span class="svc-num">ii</span><h3>Kitchen or Entry Tile Cleaning</h3><p>For textured tile, traffic lanes, sticky buildup, and grout that regular mopping will not bring back.</p><span class="svc-price">Starting at $199</span></div>
+      <div class="svc reveal rd2"><span class="svc-num">iii</span><h3>Cleaning &amp; Sealing</h3><p>Tile and grout cleaned first, then sealed when the surface is a good candidate for protection.</p><span class="svc-price">Starting at $249</span></div>
+      <div class="svc reveal"><span class="svc-num">iv</span><h3>Recaulking</h3><p>Old, cracked, moldy, or separated caulk removed and replaced around tubs, showers, corners, and edges.</p><span class="svc-price">Starting at $175</span></div>
+      <div class="svc reveal rd1"><span class="svc-num">v</span><h3>Shower Regrouting &amp; Restoration</h3><p>Failed shower grout removed carefully and replaced where cleaning alone will not solve the problem.</p><span class="svc-price">Starting at $499</span></div>
+      <div class="svc reveal rd2"><span class="svc-num">vi</span><h3>Single-Tile Repair</h3><p>Cracked or loose tile repaired or replaced when matching tile and site conditions allow a clean fix.</p><span class="svc-price">Starting at $225</span></div>
+      <div class="svc reveal"><span class="svc-num">vii</span><h3>Natural Stone Care</h3><p>Travertine, marble, limestone, slate, and other stone need safer products and a more careful quote.</p><span class="svc-price">Free personalized quote</span></div>
+    </div>
+  </div>
+</section>
 
-    <section class="section muted" id="pricing">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="section-kicker">Pricing</p>
-          <h2>Clear pricing before work starts</h2>
-          <p>Every home is different, so final pricing happens after an in-person look. These ranges help you know whether the job is in the right ballpark before anyone wastes your time.</p>
-        </div>
-        <div class="pricing-grid">
-          <article class="price-card">
-            <h3>Bathroom Refresh</h3>
-            <p class="price">$245-$325</p>
-            <p>Bathroom floor tile and grout cleaning with detail scrub and rinse/extraction.</p>
-            <p class="fine">Add clear sealer from $95.</p>
-          </article>
-          <article class="price-card">
-            <h3>Kitchen and Main Floor Clean</h3>
-            <p class="price">$325-$475</p>
-            <p>Kitchen, entry, laundry, or larger tile areas. Heavy-soil treatment available.</p>
-            <p class="fine">Add sealer from $125.</p>
-          </article>
-          <article class="price-card highlight">
-            <h3>Shower Restore</h3>
-            <p class="price">$850-$1,350</p>
-            <p>Regrout failed shower lines, remove and replace bad caulk, clean tile, and finish edges.</p>
-            <p class="fine">Final quote depends on grout condition and removal difficulty.</p>
-          </article>
-          <article class="price-card">
-            <h3>Full-House Tile Clean</h3>
-            <p class="price">$750-$1,250+</p>
-            <p>Multiple indoor tile areas including kitchens, entries, halls, bathrooms, and laundry rooms.</p>
-            <p class="fine">In-person quote required.</p>
-          </article>
-        </div>
-        <div class="addon-panel">
-          <strong>$275 minimum residential visit.</strong>
-          <span>Clear grout sealer: $95-$175</span>
-          <span>Recaulking add-on: $175-$225</span>
-          <span>Spot grout repair: $275-$425</span>
-          <span>Single tile replacement: $350-$475</span>
-          <span>Natural stone: custom quote, $425 minimum</span>
-        </div>
-      </div>
-    </section>
+<!-- BEFORE / AFTER -->
+<section id="results">
+  <div class="wrap">
+    <div class="section-label reveal">Results</div>
+    <h2 class="reveal">Before-and-After Proof <em>Without the Hype</em></h2>
+    <p class="section-desc reveal">Photos should show the actual kind of work being quoted. As more Ridgecraft jobs are completed, this section should grow with verified local project photos.</p>
+    <figure class="proof-photo reveal">
+      <img src="/assets/before-after/floor-tile-deep-clean.jpg" width="1200" height="900" alt="Before and after tile and grout cleaning on a residential tile floor" fetchpriority="high">
+      <figcaption>Floor tile deep clean. Text photos of your tile and Chris will tell you whether cleaning, sealing, regrouting, or repair makes sense.</figcaption>
+    </figure>
+    <p class="results-note reveal">Ready to check your tile? <a href="#contact">Request a free quote</a></p>
+  </div>
+</section>
 
-    <section class="section" id="why">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="section-kicker">Why Ridgecraft</p>
-          <h2>Built for homeowners who want a straight answer</h2>
-        </div>
-        <div class="card-grid five">
-          <div class="trust-card"><strong>Owner-operated</strong><span>You work directly with Chris.</span></div>
-          <div class="trust-card"><strong>Quote first</strong><span>No mystery invoice at the end.</span></div>
-          <div class="trust-card"><strong>Utah hard water</strong><span>Showers and grout lines here need more than generic cleaner.</span></div>
-          <div class="trust-card"><strong>Indoor tile focus</strong><span>Bathrooms, showers, kitchens, entries, laundry rooms, and floors.</span></div>
-          <div class="trust-card"><strong>Cleaning plus repair</strong><span>Regrouting, recaulking, sealing, and small repairs can often be handled together.</span></div>
-        </div>
+<!-- WHY -->
+<section id="why">
+  <div class="wrap">
+    <div class="section-label reveal">The Honest Pitch</div>
+    <h2 class="reveal">Local, Practical, <em>Easy to Reach</em></h2>
+    <p class="section-desc reveal">No big promises. No pressure script. Just a clear look at the tile and a quote that matches the job.</p>
+    <div class="why-grid">
+      <div class="why-items">
+        <div class="why-item reveal"><h4>Quote Before Work Starts</h4><p>Final pricing is based on measured square footage, condition, material, labor time, materials, and repair complexity.</p></div>
+        <div class="why-item reveal"><h4>Photos Help Keep It Simple</h4><p>Send pictures first if you want a quick read. If the job needs an in-person look, we'll say that plainly.</p></div>
+        <div class="why-item reveal"><h4>Repair Before Replace</h4><p>Cleaning, sealing, caulking, or targeted grout repair can often buy back a lot of life before replacement is necessary.</p></div>
+        <div class="why-item reveal"><h4>Built for Early Customers</h4><p>Pricing is intentionally conservative while Ridgecraft builds local jobs, reviews, before-and-after photos, and referrals.</p></div>
       </div>
-    </section>
-
-    <section class="section muted" id="quote">
-      <div class="wrap quote-grid">
-        <div>
-          <p class="section-kicker">Free in-person quote</p>
-          <h2>Request a tile quote</h2>
-          <p>Tell us what is going on with your tile. Chris will review the details and follow up to schedule a quick quote.</p>
-          <div class="call-box">
-            <span>Prefer to talk?</span>
-            <a href="tel:+18016879723">Call or text (801) 687-9723</a>
-          </div>
-        </div>
-        <form class="quote-form" id="quote-form" action="https://usebasin.com/f/8c0018ad43c9" method="POST" enctype="multipart/form-data" accept-charset="UTF-8" novalidate>
-          <div class="form-row">
-            <label for="name">Name <span aria-hidden="true">*</span></label>
-            <input id="name" name="name" autocomplete="name" required>
-          </div>
-          <div class="form-row">
-            <label for="phone">Phone <span aria-hidden="true">*</span></label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
-          </div>
-          <div class="form-row">
-            <label for="email">Email <span aria-hidden="true">*</span></label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-          </div>
-          <div class="form-row">
-            <label for="city">City <span aria-hidden="true">*</span></label>
-            <input id="city" name="city" autocomplete="address-level2" required>
-          </div>
-          <div class="form-row">
-            <label for="service">Requested service <span aria-hidden="true">*</span></label>
-            <select id="service" name="service" required>
-              <option value="">Choose one</option>
-              <option>Tile and grout cleaning</option>
-              <option>Shower regrouting</option>
-              <option>Recaulking</option>
-              <option>Grout repair</option>
-              <option>Grout sealing</option>
-              <option>Tile repair</option>
-              <option>Natural stone care</option>
-              <option>Not sure yet</option>
-            </select>
-          </div>
-          <fieldset class="form-row contact-method">
-            <legend>Preferred contact <span aria-hidden="true">*</span></legend>
-            <label><input type="radio" name="preferred_contact" value="Call" required> Call</label>
-            <label><input type="radio" name="preferred_contact" value="Text"> Text</label>
-            <label><input type="radio" name="preferred_contact" value="Email"> Email</label>
-          </fieldset>
-          <div class="form-row full">
-            <label for="details">Project details <span aria-hidden="true">*</span></label>
-            <textarea id="details" name="details" rows="5" required placeholder="Tell us the room, tile type if known, what is wrong, and roughly how long it has been that way."></textarea>
-          </div>
-          <div class="form-row full">
-            <label for="photos">Optional photos</label>
-            <input id="photos" name="attachments[]" type="file" accept="image/*" multiple>
-            <p class="fine">Photos help Chris decide whether cleaning, sealing, regrouting, or repair makes sense.</p>
-          </div>
-          <div class="honeypot" aria-hidden="true">
-            <label for="company_website">Company website</label>
-            <input id="company_website" name="company_website" tabindex="-1" autocomplete="off">
-          </div>
-          <p class="privacy">Your information is only used to follow up about your tile quote. Do not send private payment or account details through this form.</p>
-          <button class="button primary full-button" type="submit">Request My Free Quote</button>
-          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div>
-        <strong>Ridgecraft Tile Co.</strong>
-        <p>Residential tile and grout cleaning, regrouting, recaulking, sealing, and repair in Orem and Utah County.</p>
-      </div>
-      <div>
-        <a href="tel:+18016879723">(801) 687-9723</a>
-        <a href="/tile-cleaning-orem/">Tile Cleaning Orem</a>
-        <a href="/tile-cleaning-utah-county/">Utah County Service Area</a>
+      <div class="comparison reveal">
+        <div class="comp-header"><span>Good Fit</span><span></span><span></span></div>
+        <div class="comp-row"><span class="comp-service">Dirty grout lines</span><span class="comp-us">Clean</span><span class="comp-them"></span></div>
+        <div class="comp-row"><span class="comp-service">Cracked or missing grout</span><span class="comp-us">Repair</span><span class="comp-them"></span></div>
+        <div class="comp-row"><span class="comp-service">Moldy or split caulk</span><span class="comp-us">Recaulk</span><span class="comp-them"></span></div>
+        <div class="comp-row"><span class="comp-service">Loose or cracked tile</span><span class="comp-us">Quote</span><span class="comp-them"></span></div>
+        <p class="comp-note">The goal is a useful recommendation, not a bigger ticket than the tile actually needs.</p>
       </div>
     </div>
-  </footer>
-  <div class="mobile-call-bar">
-    <a href="tel:+18016879723">Call for a Free Quote</a>
-    <a href="#quote">Request Quote</a>
   </div>
-  <script src="/site.js" defer></script>
+</section>
+
+<!-- GUARANTEE -->
+<div class="guarantee">
+  <div class="tile-grid"></div>
+  <div class="guarantee-inner reveal">
+    <h3><em>If something is off, say so.</em></h3>
+    <p>You'll get a walkthrough before the job is wrapped. If something needs attention, Chris can address it while the tools are still there.</p>
+  </div>
+</div>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-label reveal">Pricing</div>
+    <h2 class="reveal">Simple Starting Prices. <em>Final Quote After a Look.</em></h2>
+    <p class="section-desc reveal">These are conservative starting points for customer-acquisition stage work. The final quote depends on size, condition, material, labor time, materials, and repair complexity.</p>
+    <div class="pricing-grid">
+      <div class="pkg reveal"><span class="pkg-label">Bathroom</span><h3>Bathroom Cleaning</h3><span class="pkg-price">Starting at $149</span><div class="pkg-note">Bathroom tile and grout cleaning.</div></div>
+      <div class="pkg reveal rd1"><span class="pkg-label">Floor Tile</span><h3>Kitchen or Entry Cleaning</h3><span class="pkg-price">Starting at $199</span><div class="pkg-note">Traffic areas, textured tile, and dirty grout lines.</div></div>
+      <div class="pkg featured reveal rd2"><span class="pkg-label">Clean + Protect</span><h3>Cleaning and Sealing</h3><span class="pkg-price">Starting at $249</span><div class="pkg-note">Cleaning plus clear sealer where appropriate.</div></div>
+      <div class="pkg reveal"><span class="pkg-label">Caulk</span><h3>Recaulking</h3><span class="pkg-price">Starting at $175</span><div class="pkg-note">Tubs, showers, corners, fixtures, and edges.</div></div>
+      <div class="pkg reveal rd1"><span class="pkg-label">Shower</span><h3>Shower Regrouting / Restoration</h3><span class="pkg-price">Starting at $499</span><div class="pkg-note">Failed grout removed and replaced where needed.</div></div>
+      <div class="pkg reveal rd2"><span class="pkg-label">Repair</span><h3>Single-Tile Repair</h3><span class="pkg-price">Starting at $225</span><div class="pkg-note">Depends heavily on matching tile and site conditions.</div></div>
+      <div class="pkg reveal"><span class="pkg-label">Stone</span><h3>Natural Stone</h3><span class="pkg-price">Free personalized quote</span><div class="pkg-note">Stone type and finish determine the safest process.</div></div>
+    </div>
+    <p class="pricing-note reveal">Final pricing depends on area size, tile and grout condition, material type, buildup, damage, access, materials, and repair complexity.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="section-label reveal">How It Works</div>
+    <h2 class="reveal">Simple. Transparent. <em>Done Right.</em></h2>
+    <p class="section-desc reveal">Four steps from first contact to clean tile.</p>
+    <div class="process-steps">
+      <div class="step reveal"><span class="step-num">01</span><h4>Send Photos or Request a Quote</h4><p>Start with the form, a text, or a call. Photos help narrow down whether cleaning, sealing, grout, caulk, or repair is the right move.</p></div>
+      <div class="step reveal rd1"><span class="step-num">02</span><h4>Measure and Inspect</h4><p>Final pricing depends on the real tile: square footage, condition, material, labor time, and repair complexity.</p></div>
+      <div class="step reveal rd2"><span class="step-num">03</span><h4>The Work Gets Done</h4><p>Tile is cleaned, grout or caulk is repaired where needed, and sealer is added when it is the right fit.</p></div>
+      <div class="step reveal rd3"><span class="step-num">04</span><h4>Walkthrough</h4><p>You see the result before the job wraps. Useful before-and-after photos can be taken with permission.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="section-label reveal">Reviews</div>
+    <h2 class="reveal">Proof Comes From <em>Finished Jobs</em></h2>
+    <p class="section-desc reveal">Ridgecraft is building the first wave of local jobs, reviews, before-and-after photos, and referrals. Verified reviews should be added here once they exist publicly.</p>
+    <div class="testimonials-list">
+      <div class="tcard reveal"><p class="tcard-text">Early pricing is designed to help local homeowners say yes while still protecting the time and materials needed to do careful work.</p><div class="tcard-author"><div class="tcard-name">Current focus</div><div class="tcard-loc">Initial jobs and photos</div></div></div>
+      <div class="tcard reveal rd1"><p class="tcard-text">Before-and-after photos should show actual Ridgecraft work by service and city, not generic claims or filler reviews.</p><div class="tcard-author"><div class="tcard-name">Proof standard</div><div class="tcard-loc">Real projects only</div></div></div>
+      <div class="tcard reveal rd2"><p class="tcard-text">The best next step is simple: quote fairly, do clean work, ask for reviews, and turn each finished job into local proof.</p><div class="tcard-author"><div class="tcard-name">Lead strategy</div><div class="tcard-loc">Reviews and referrals</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-label reveal">Contact</div>
+    <h2 class="reveal">Free Quote, <em>No Commitment</em></h2>
+    <p class="section-desc reveal">Send the basics and a few photos if you have them. Chris will follow up with the next practical step.</p>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <div class="contact-block"><div class="contact-block-label">Location</div><div class="contact-block-value">Orem, Utah</div></div>
+        <div class="contact-block"><div class="contact-block-label">Phone / Text</div><div class="contact-block-value"><a href="tel:+18016879723">(801) 687-9723</a></div></div>
+        <div class="area-note"><strong>Serving Orem &amp; Utah County.</strong> Indoor tile only: bathrooms, kitchens, entryways, showers, grout, caulk, small tile repair, and natural stone. Not sure if it fits? Ask.</div>
+      </div>
+      <form class="contact-form" id="quote-form" action="https://usebasin.com/f/8c0018ad43c9" method="POST" enctype="multipart/form-data" accept-charset="UTF-8" novalidate>
+        <div class="form-group honeypot" aria-hidden="true"><label for="company_website">Company website</label><input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off"></div>
+        <div class="form-row"><div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" required></div><div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" placeholder="(801) 555-0000" autocomplete="tel" required></div></div>
+        <div class="form-row"><div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="jane@email.com" autocomplete="email" required></div><div class="form-group"><label for="city">City</label><input type="text" id="city" name="city" placeholder="Orem" autocomplete="address-level2" required></div></div>
+        <div class="form-group"><label for="service">Service Needed</label><select id="service" name="service" required><option value="">Select a service...</option><option>Tile and grout cleaning</option><option>Bathroom cleaning</option><option>Kitchen or entry tile cleaning</option><option>Cleaning and sealing</option><option>Recaulking</option><option>Shower regrouting/restoration</option><option>Single-tile repair</option><option>Natural stone</option><option>Not sure - just want a quote</option></select></div>
+        <fieldset class="contact-method"><legend>Preferred contact</legend><label><input type="radio" name="preferred_contact" value="Text" required> Text</label><label><input type="radio" name="preferred_contact" value="Call"> Call</label><label><input type="radio" name="preferred_contact" value="Email"> Email</label></fieldset>
+        <div class="form-group"><label for="details">Tell Us About Your Tile</label><textarea id="details" name="details" placeholder="Bathroom floor, kitchen tile, shower grout, cracked tile, approximate size, and what condition it is in." required></textarea></div>
+        <div class="form-group"><label for="attachments">Photos</label><input type="file" id="attachments" name="attachments[]" accept="image/*" multiple></div>
+        <p class="privacy">Your request goes through Basin and is sent to Ridgecraft. No passwords or payment information belong in this form.</p>
+        <button type="submit" class="form-submit full-button">Request My Free Quote</button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="tile-grid"></div>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <svg width="22" height="22" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100" height="100" fill="#252420"/>
+        <rect x="8" y="8" width="40" height="40" fill="#1a1a18"/>
+        <rect x="52" y="8" width="40" height="40" fill="#b8965a"/>
+        <rect x="8" y="52" width="40" height="40" fill="#b8965a"/>
+        <rect x="52" y="52" width="40" height="40" fill="#1a1a18"/>
+      </svg>
+      <div class="footer-logo-text">
+        <span class="footer-logo-name">RIDGECRAFT</span>
+        <span class="footer-logo-sub">Tile Co.</span>
+      </div>
+    </div>
+    <ul class="footer-links"><li><a href="#services">Services</a></li><li><a href="/tile-cleaning-orem/">Tile Cleaning</a></li><li><a href="/grout-repair-orem/">Grout Repair</a></li><li><a href="/shower-regrouting-orem/">Shower Regrouting</a></li><li><a href="/tile-cleaning-utah-county/">Service Area</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#contact">Contact</a></li></ul>
+    <div class="footer-copy">© 2025 Ridgecraft Tile Co. · Orem, Utah</div>
+  </div>
+</footer>
+
+<div class="mobile-cta-bar">
+  <a href="tel:+18016879723">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call
+  </a>
+  <a href="#contact">Quote</a>
+</div>
+
+<script>
+  const hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobileMenu');
+  hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':''});
+  function closeMenu(){hamburger.classList.remove('active');mobileMenu.classList.remove('open');document.body.style.overflow=''}
+  window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>10)});
+  const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+<script src="/site.js" defer></script>
 </body>
 </html>

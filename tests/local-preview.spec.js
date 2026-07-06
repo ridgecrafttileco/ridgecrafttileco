@@ -29,10 +29,12 @@ test("home page lead actions are present and form validates", async ({ page }) =
   });
 
   await page.goto(baseUrl + "/");
-  await expect(page.getByRole("heading", { name: /tile and grout cleaning in orem/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /your tile,\s*restored/i })).toBeVisible();
+  await expect(page.locator("#contact")).toBeVisible();
 
   const phoneLinks = await page.locator('a[href="tel:+18016879723"]').count();
   expect(phoneLinks).toBeGreaterThanOrEqual(3);
+  expect(await page.locator('a[href="/#quote"]').count()).toBe(0);
 
   await page.getByRole("button", { name: /request my free quote/i }).click();
   await expect(page.locator("#form-status")).toHaveText(/please fix/i);

@@ -369,16 +369,6 @@
   .step h4{font-family:var(--serif);font-size:1.05rem;font-weight:500;color:var(--ink);margin-bottom:0.4rem}
   .step p{font-size:0.85rem;color:var(--secondary);line-height:1.65}
 
-  /* ═══ TESTIMONIALS ═══ */
-  #testimonials{background:var(--bg-warm);border-top:1px solid var(--rule)}
-  .testimonials-list{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
-  .tcard-stars{display:flex;gap:2px;margin-bottom:0.8rem}
-  .tcard-star{width:13px;height:13px;background:var(--gold);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
-  .tcard-text{font-family:var(--serif);font-size:1.02rem;font-weight:400;font-style:italic;color:var(--text);line-height:1.65;margin-bottom:1rem}
-  .tcard-author{border-top:1px solid var(--rule);padding-top:0.8rem}
-  .tcard-name{font-size:0.82rem;font-weight:600;color:var(--ink)}
-  .tcard-loc{font-size:0.78rem;color:var(--muted)}
-
   /* ═══ CONTACT ═══ */
   #contact{border-top:1px solid var(--rule)}
   .contact-grid{display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start}
@@ -403,11 +393,13 @@
 
 
   .proof-photo{margin:0;max-width:980px;border:1px solid var(--rule);border-radius:6px;background:var(--bg);overflow:hidden}
-  .proof-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule)}
-  .proof-panel{background:var(--bg);padding:0.85rem}
+  .proof-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);align-items:stretch}
+  .proof-panel{background:var(--bg);padding:0.85rem;display:flex;flex-direction:column}
   .proof-label{display:block;margin-bottom:0.55rem;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark)}
-  .proof-panel picture{display:block}
-  .proof-panel img{display:block;width:100%;height:auto;border-radius:4px}
+  .proof-panel picture{display:block;aspect-ratio:4/3;overflow:hidden;border-radius:4px;background:var(--bg-warm)}
+  .proof-panel img{display:block;width:100%;height:100%;object-fit:cover}
+  .proof-panel-before img{object-position:center 48%}
+  .proof-panel-after img{object-position:center 70%}
   .proof-photo figcaption{padding:0.9rem 1rem;font-size:0.82rem;color:var(--muted);line-height:1.5;border-top:1px solid var(--rule)}
   .pricing-grid{grid-template-columns:repeat(3,1fr)}
   .pricing-note{margin-top:1.3rem;font-size:0.9rem;color:var(--secondary);line-height:1.7;max-width:760px}
@@ -452,7 +444,6 @@
     .pkg:nth-child(2){border-right:none}
     .process-steps{grid-template-columns:1fr 1fr}
     .why-grid{grid-template-columns:1fr;gap:2.5rem}
-    .testimonials-list{grid-template-columns:1fr;gap:2rem}
     .contact-grid{grid-template-columns:1fr}
 
   }
@@ -632,14 +623,14 @@
     <p class="section-desc reveal">Real customer photos from a kitchen tile floor cleaning job.</p>
     <figure class="proof-photo reveal">
       <div class="proof-pair">
-        <div class="proof-panel">
+        <div class="proof-panel proof-panel-before">
           <span class="proof-label">Before</span>
           <picture>
             <source srcset="/assets/before-after/kitchen-floor-proof/kitchen-floor-before-800.jpg 800w, /assets/before-after/kitchen-floor-proof/kitchen-floor-before-1200.jpg 1200w" sizes="(max-width: 650px) calc(100vw - 4.1rem), 474px">
             <img src="/assets/before-after/kitchen-floor-proof/kitchen-floor-before-800.jpg" width="800" height="1066" alt="Kitchen tile floor before cleaning" loading="lazy">
           </picture>
         </div>
-        <div class="proof-panel">
+        <div class="proof-panel proof-panel-after">
           <span class="proof-label">After</span>
           <picture>
             <source srcset="/assets/before-after/kitchen-floor-proof/kitchen-floor-after-800.jpg 800w, /assets/before-after/kitchen-floor-proof/kitchen-floor-after-1200.jpg 1200w" sizes="(max-width: 650px) calc(100vw - 4.1rem), 474px">
@@ -717,20 +708,6 @@
       <div class="step reveal rd1"><span class="step-num">02</span><h4>Measure and Inspect</h4><p>Final pricing depends on the real tile: square footage, condition, material, labor time, and repair complexity.</p></div>
       <div class="step reveal rd2"><span class="step-num">03</span><h4>The Work Gets Done</h4><p>Tile is cleaned, grout or caulk is repaired where needed, and sealer is added when it is the right fit.</p></div>
       <div class="step reveal rd3"><span class="step-num">04</span><h4>Walkthrough</h4><p>You see the result before the job wraps. Useful before-and-after photos can be taken with permission.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="testimonials">
-  <div class="wrap">
-    <div class="section-label reveal">Reviews</div>
-    <h2 class="reveal">Proof Comes From <em>Finished Jobs</em></h2>
-    <p class="section-desc reveal">Ridgecraft is building the first wave of local jobs, reviews, before-and-after photos, and referrals. Verified reviews should be added here once they exist publicly.</p>
-    <div class="testimonials-list">
-      <div class="tcard reveal"><p class="tcard-text">Early pricing is designed to help local homeowners say yes while still protecting the time and materials needed to do careful work.</p><div class="tcard-author"><div class="tcard-name">Current focus</div><div class="tcard-loc">Initial jobs and photos</div></div></div>
-      <div class="tcard reveal rd1"><p class="tcard-text">Before-and-after photos should show actual Ridgecraft work by service and city, not generic claims or filler reviews.</p><div class="tcard-author"><div class="tcard-name">Proof standard</div><div class="tcard-loc">Real projects only</div></div></div>
-      <div class="tcard reveal rd2"><p class="tcard-text">The best next step is simple: quote fairly, do clean work, ask for reviews, and turn each finished job into local proof.</p><div class="tcard-author"><div class="tcard-name">Lead strategy</div><div class="tcard-loc">Reviews and referrals</div></div></div>
     </div>
   </div>
 </section>

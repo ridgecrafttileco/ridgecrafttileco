@@ -320,6 +320,8 @@
   .results-note{text-align:center;margin-top:2rem;font-size:0.88rem;color:var(--secondary)}
   .results-note a{color:var(--orange);font-weight:600;text-decoration:none}
   .results-note a:hover{text-decoration:underline}
+  .results-note .btn-primary{color:#fff;text-decoration:none}
+  .results-note .btn-primary:hover{text-decoration:none}
 
   /* ═══ WHY ═══ */
   #why{border-top:1px solid var(--rule)}
@@ -400,9 +402,13 @@
 
 
 
-  .proof-photo{margin:0;max-width:720px;border:1px solid var(--rule);border-radius:6px;background:var(--bg);overflow:hidden}
-  .proof-photo img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
-  .proof-photo figcaption{padding:0.9rem 1rem;font-size:0.82rem;color:var(--muted);line-height:1.5}
+  .proof-photo{margin:0;max-width:980px;border:1px solid var(--rule);border-radius:6px;background:var(--bg);overflow:hidden}
+  .proof-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule)}
+  .proof-panel{background:var(--bg);padding:0.85rem}
+  .proof-label{display:block;margin-bottom:0.55rem;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark)}
+  .proof-panel picture{display:block}
+  .proof-panel img{display:block;width:100%;height:auto;border-radius:4px}
+  .proof-photo figcaption{padding:0.9rem 1rem;font-size:0.82rem;color:var(--muted);line-height:1.5;border-top:1px solid var(--rule)}
   .pricing-grid{grid-template-columns:repeat(3,1fr)}
   .pricing-note{margin-top:1.3rem;font-size:0.9rem;color:var(--secondary);line-height:1.7;max-width:760px}
   .pkg-list.compact{gap:0.55rem}
@@ -472,6 +478,7 @@
     .pkg{border-right:none}
 
     .form-row{grid-template-columns:1fr}
+    .proof-pair{grid-template-columns:1fr}
     .footer-inner{flex-direction:column;text-align:center}
     .footer-logo{justify-content:center}
     .footer-links{flex-wrap:wrap;justify-content:center}
@@ -622,12 +629,27 @@
   <div class="wrap">
     <div class="section-label reveal">Results</div>
     <h2 class="reveal">Before-and-After Proof <em>Without the Hype</em></h2>
-    <p class="section-desc reveal">Photos should show the actual kind of work being quoted. As more Ridgecraft jobs are completed, this section should grow with verified local project photos.</p>
+    <p class="section-desc reveal">Real customer photos from a kitchen tile floor cleaning job.</p>
     <figure class="proof-photo reveal">
-      <img src="/assets/before-after/floor-tile-deep-clean.jpg" width="1200" height="900" alt="Before and after tile and grout cleaning on a residential tile floor" fetchpriority="high">
-      <figcaption>Floor tile deep clean. Text photos of your tile and Chris will tell you whether cleaning, sealing, regrouting, or repair makes sense.</figcaption>
+      <div class="proof-pair">
+        <div class="proof-panel">
+          <span class="proof-label">Before</span>
+          <picture>
+            <source srcset="/assets/before-after/kitchen-floor-proof/kitchen-floor-before-800.jpg 800w, /assets/before-after/kitchen-floor-proof/kitchen-floor-before-1200.jpg 1200w" sizes="(max-width: 650px) calc(100vw - 4.1rem), 474px">
+            <img src="/assets/before-after/kitchen-floor-proof/kitchen-floor-before-800.jpg" width="800" height="1066" alt="Kitchen tile floor before cleaning" loading="lazy">
+          </picture>
+        </div>
+        <div class="proof-panel">
+          <span class="proof-label">After</span>
+          <picture>
+            <source srcset="/assets/before-after/kitchen-floor-proof/kitchen-floor-after-800.jpg 800w, /assets/before-after/kitchen-floor-proof/kitchen-floor-after-1200.jpg 1200w" sizes="(max-width: 650px) calc(100vw - 4.1rem), 474px">
+            <img src="/assets/before-after/kitchen-floor-proof/kitchen-floor-after-800.jpg" width="800" height="600" alt="Kitchen tile floor after cleaning" loading="lazy">
+          </picture>
+        </div>
+      </div>
+      <figcaption>Same kitchen tile floor photographed from different angles before and after cleaning.</figcaption>
     </figure>
-    <p class="results-note reveal">Ready to check your tile? <a href="#contact">Request a free quote</a></p>
+    <p class="results-note reveal"><a class="btn-primary" href="#contact">Request a Free Quote</a></p>
   </div>
 </section>
 
